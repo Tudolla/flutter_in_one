@@ -13,7 +13,7 @@ class _TabBarScreenState extends State<TabBarScreen> {
   Widget build(BuildContext context) {
     return DefaultTabController(
         initialIndex: 1,
-        length: 4,
+        length: 5,
         child: Scaffold(
           appBar: AppBar(
             centerTitle: true,
@@ -36,10 +36,10 @@ class _TabBarScreenState extends State<TabBarScreen> {
             // ),
 
             bottom: ButtonsTabBar(
-              buttonMargin: EdgeInsets.symmetric(horizontal: 20),
+              buttonMargin: const EdgeInsets.symmetric(horizontal: 10),
               splashColor: Colors.purpleAccent.withOpacity(.5),
               backgroundColor: Colors.orangeAccent.withOpacity(.5),
-              unselectedBackgroundColor: Colors.grey.withOpacity(.1),
+              unselectedBackgroundColor: Colors.grey.withOpacity(.3),
               unselectedLabelStyle: const TextStyle(color: Colors.black),
               labelStyle: const TextStyle(
                   color: Colors.white, fontWeight: FontWeight.bold),
@@ -60,32 +60,42 @@ class _TabBarScreenState extends State<TabBarScreen> {
                   icon: Icon(Icons.bakery_dining_outlined),
                   text: "Queen",
                 ),
+                Tab(
+                  icon: Icon(Icons.sports_bar_outlined),
+                  text: "Bar",
+                ),
               ],
             ),
           ),
           body: const TabBarView(children: [
             Padding(
-              padding: const EdgeInsets.all(10),
+              padding: EdgeInsets.all(10),
               child: Center(
                 child: Text("Page 1"),
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(10),
+              padding: EdgeInsets.all(10),
               child: Center(
-                child: Text("Page 1"),
+                child: Text("Page 2"),
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(10),
+              padding: EdgeInsets.all(10),
               child: Center(
-                child: Text("Page 1"),
+                child: Text("Page 3"),
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(10),
+              padding: EdgeInsets.all(10),
               child: Center(
-                child: Text("Page 1"),
+                child: Text("Page 4"),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.all(10),
+              child: Center(
+                child: Text("Page 5"),
               ),
             ),
           ]),
