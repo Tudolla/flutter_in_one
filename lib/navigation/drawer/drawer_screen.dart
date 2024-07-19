@@ -46,7 +46,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
             Container(
               margin:
                   EdgeInsets.only(right: MediaQuery.of(context).size.width / 2),
-              child: Divider(
+              child: const Divider(
                 color: Colors.white,
               ),
             ),

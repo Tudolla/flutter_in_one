@@ -1,8 +1,8 @@
 import 'package:dummy_flutter_ui/navigation/tab_bar2/tab_item.dart';
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class HomeTabPage extends StatelessWidget {
+  const HomeTabPage({super.key});
 
   @override
   Widget build(BuildContext context) {

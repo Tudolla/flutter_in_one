@@ -38,7 +38,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 children: [
                   isDrawerOpen
                       ? GestureDetector(
-                          child: Icon(Icons.arrow_back_ios),
+                          child: const Icon(Icons.arrow_back_ios),
                           onTap: () {
                             setState(() {
                               xOffset = 0;
@@ -48,7 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           },
                         )
                       : GestureDetector(
-                          child: Icon(Icons.menu),
+                          child: const Icon(Icons.menu),
                           onTap: () {
                             setState(() {
                               xOffset = 280;
@@ -88,7 +88,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             borderRadius: BorderRadius.circular(10),
                             color: Colors.green.withOpacity(.4),
                           ),
-                          child: Center(
+                          child: const Center(
                             child: Text(
                               "Goal",
                               style: TextStyle(
@@ -104,47 +104,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             borderRadius: BorderRadius.circular(10),
                             color: Colors.green.withOpacity(.4),
                           ),
-                          child: Center(
-                            child: Text(
-                              "Goal",
-                              style: TextStyle(
-                                fontSize: 30,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(
-                      height: 20,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Container(
-                          width: sizeWidth * 1 / 3 + 20,
-                          height: sizeWidth * 1 / 3 + 20,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            color: Colors.green.withOpacity(.4),
-                          ),
-                          child: Center(
-                            child: Text(
-                              "Goal",
-                              style: TextStyle(
-                                fontSize: 30,
-                              ),
-                            ),
-                          ),
-                        ),
-                        Container(
-                          width: sizeWidth * 1 / 3 + 20,
-                          height: sizeWidth * 1 / 3 + 20,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            color: Colors.green.withOpacity(.4),
-                          ),
-                          child: Center(
+                          child: const Center(
                             child: Text(
                               "Goal",
                               style: TextStyle(
@@ -168,7 +128,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             borderRadius: BorderRadius.circular(10),
                             color: Colors.green.withOpacity(.4),
                           ),
-                          child: Center(
+                          child: const Center(
                             child: Text(
                               "Goal",
                               style: TextStyle(
@@ -184,7 +144,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             borderRadius: BorderRadius.circular(10),
                             color: Colors.green.withOpacity(.4),
                           ),
-                          child: Center(
+                          child: const Center(
                             child: Text(
                               "Goal",
                               style: TextStyle(
@@ -208,7 +168,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             borderRadius: BorderRadius.circular(10),
                             color: Colors.green.withOpacity(.4),
                           ),
-                          child: Center(
+                          child: const Center(
                             child: Text(
                               "Goal",
                               style: TextStyle(
@@ -224,7 +184,47 @@ class _HomeScreenState extends State<HomeScreen> {
                             borderRadius: BorderRadius.circular(10),
                             color: Colors.green.withOpacity(.4),
                           ),
-                          child: Center(
+                          child: const Center(
+                            child: Text(
+                              "Goal",
+                              style: TextStyle(
+                                fontSize: 30,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Container(
+                          width: sizeWidth * 1 / 3 + 20,
+                          height: sizeWidth * 1 / 3 + 20,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: Colors.green.withOpacity(.4),
+                          ),
+                          child: const Center(
+                            child: Text(
+                              "Goal",
+                              style: TextStyle(
+                                fontSize: 30,
+                              ),
+                            ),
+                          ),
+                        ),
+                        Container(
+                          width: sizeWidth * 1 / 3 + 20,
+                          height: sizeWidth * 1 / 3 + 20,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: Colors.green.withOpacity(.4),
+                          ),
+                          child: const Center(
                             child: Text(
                               "Goal",
                               style: TextStyle(
