@@ -63,8 +63,8 @@ class MyApp extends StatelessWidget {
       // home: const CustomScrollViewScreen(),
       // home: const CustomScrollPageThree(),
       // home: const SqliteHomeScreen(),
-      // home: const SplashScreen(),
-      home: const SharedPrefrenceScreen(),
+      home: const SplashScreen(),
+      // home: const SharedPrefrenceScreen(),
     );
   }
 }

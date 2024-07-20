@@ -9,67 +9,113 @@ class MyDrawer extends StatelessWidget {
     return Drawer(
       width: 250,
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Container(
-            width: double.infinity,
-            padding: const EdgeInsets.all(20),
-            color: Colors.blueGrey,
-            child: Center(
-              child: Column(
-                children: [
-                  Container(
-                    height: 150,
-                    width: 100,
-                    decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                      image: DecorationImage(
-                        image: AssetImage("images/avatar.png"),
-                        // fit: BoxFit.,
+          Column(
+            children: [
+              Container(
+                width: double.infinity,
+                padding: const EdgeInsets.all(20),
+                color: Colors.blueGrey,
+                child: Center(
+                  child: Column(
+                    children: [
+                      Container(
+                        height: 150,
+                        width: 100,
+                        decoration: const BoxDecoration(
+                          shape: BoxShape.circle,
+                          image: DecorationImage(
+                            image: AssetImage("images/avatar.png"),
+                            // fit: BoxFit.,
+                          ),
+                        ),
                       ),
-                    ),
+                      const Text(
+                        "Monstarlab Vietnam",
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                      )
+                    ],
                   ),
-                  const Text(
-                    "Monstarlab Vietnam",
-                    style: TextStyle(
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                    ),
-                  )
-                ],
+                ),
               ),
-            ),
+              const SizedBox(
+                height: 30,
+              ),
+              ListTile(
+                title: const Text("Feed back"),
+                leading: Icon(Icons.feedback_outlined),
+              ),
+              ListTile(
+                title: const Text("Achievements"),
+                leading: Icon(Icons.price_change_outlined),
+              ),
+              ListTile(
+                title: const Text("Work day"),
+                leading: Icon(Icons.calendar_month_outlined),
+              ),
+              ListTile(
+                title: const Text("About company"),
+                leading: Icon(Icons.square_outlined),
+              ),
+            ],
           ),
-          const SizedBox(
-            height: 30,
-          ),
-          ListTile(
-            title: const Text("Toyota"),
-            leading: Icon(Icons.toys_outlined),
-          ),
-          ListTile(
-            title: const Text("Honda"),
-            leading: Icon(Icons.car_crash_outlined),
-          ),
-          ListTile(
-            title: const Text("Volvo"),
-            leading: Icon(Icons.car_rental),
-          ),
-          // SizedBox(
-          //   child: Row(
-          //     children: [
-          //       ListTile(
-          //         leading: Icon(Icons.circle_outlined),
-          //       ),
-          //       ListTile(
-          //         leading: Icon(Icons.circle_outlined),
-          //       ),
-          //     ],
+          // Container(
+          //   width: double.infinity,
+          //   padding: const EdgeInsets.all(20),
+          //   color: Colors.blueGrey,
+          //   child: Center(
+          //     child: Column(
+          //       children: [
+          //         Container(
+          //           height: 150,
+          //           width: 100,
+          //           decoration: const BoxDecoration(
+          //             shape: BoxShape.circle,
+          //             image: DecorationImage(
+          //               image: AssetImage("images/avatar.png"),
+          //               // fit: BoxFit.,
+          //             ),
+          //           ),
+          //         ),
+          //         const Text(
+          //           "Monstarlab Vietnam",
+          //           style: TextStyle(
+          //             fontSize: 15,
+          //             fontWeight: FontWeight.bold,
+          //             color: Colors.white,
+          //           ),
+          //         )
+          //       ],
+          //     ),
           //   ),
           // ),
+          // const SizedBox(
+          //   height: 30,
+          // ),
+          // ListTile(
+          //   title: const Text("Feed back"),
+          //   leading: Icon(Icons.feedback_outlined),
+          // ),
+          // ListTile(
+          //   title: const Text("Achievements"),
+          //   leading: Icon(Icons.price_change_outlined),
+          // ),
+          // ListTile(
+          //   title: const Text("Work day"),
+          //   leading: Icon(Icons.calendar_month_outlined),
+          // ),
+          // ListTile(
+          //   title: const Text("About company"),
+          //   leading: Icon(Icons.square_outlined),
+          // ),
           ListTile(
-            title: const Text("Audi"),
-            leading: Icon(Icons.circle_outlined),
+            title: const Text("Sign out!"),
+            leading: Icon(Icons.login_rounded),
           ),
         ],
       ),

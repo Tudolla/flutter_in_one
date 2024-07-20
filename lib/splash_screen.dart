@@ -1,4 +1,5 @@
 import 'package:dummy_flutter_ui/navigation/drawer/main_screen.dart';
+import 'package:dummy_flutter_ui/navigation/drawer2/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
@@ -20,7 +21,7 @@ class _SplashScreenState extends State<SplashScreen> {
     await Future.delayed(const Duration(seconds: 3));
     Navigator.pushReplacement(
       context,
-      MaterialPageRoute(builder: (context) => const MainScreen()),
+      MaterialPageRoute(builder: (context) => const HomeScreenDrawer2()),
     );
   }
 
