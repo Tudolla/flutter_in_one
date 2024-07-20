@@ -14,7 +14,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
       color: Colors.blueGrey,
       child: Padding(
         padding: const EdgeInsets.only(
-          top: 40,
+          top: 60,
           left: 20,
           bottom: 60,
         ),
@@ -56,31 +56,37 @@ class _DrawerScreenState extends State<DrawerScreen> {
             const Column(
               children: [
                 ListTile(
-                  contentPadding: EdgeInsets.only(left: 10),
+                  contentPadding: EdgeInsets.only(left: 0),
                   minLeadingWidth: 1,
                   leading: Icon(Icons.home),
                   title: Text("Home"),
                 ),
                 ListTile(
-                  contentPadding: EdgeInsets.only(left: 10),
+                  contentPadding: EdgeInsets.only(left: 0),
                   minLeadingWidth: 1,
                   leading: Icon(Icons.integration_instructions_rounded),
                   title: Text("Introduction"),
                 ),
                 ListTile(
-                  contentPadding: EdgeInsets.only(left: 10),
+                  contentPadding: EdgeInsets.only(left: 0),
                   minLeadingWidth: 1,
                   leading: Icon(Icons.group_add),
                   title: Text("Team"),
                 ),
                 ListTile(
-                  contentPadding: EdgeInsets.only(left: 8),
+                  contentPadding: EdgeInsets.only(left: 0),
                   minLeadingWidth: 1,
                   leading: Icon(Icons.person_2_rounded),
                   title: Text("About us!"),
                 ),
                 ListTile(
-                  contentPadding: EdgeInsets.only(left: 8),
+                  contentPadding: EdgeInsets.only(left: 0),
+                  minLeadingWidth: 1,
+                  leading: Icon(Icons.switch_access_shortcut),
+                  title: Text("Mode switch"),
+                ),
+                ListTile(
+                  contentPadding: EdgeInsets.only(left: 0),
                   minLeadingWidth: 1,
                   leading: Icon(Icons.login_outlined),
                   title: Text("Logout"),
