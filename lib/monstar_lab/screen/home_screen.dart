@@ -1,5 +1,6 @@
 import 'package:dummy_flutter_ui/monstar_lab/screen/drawer.dart';
 import 'package:dummy_flutter_ui/monstar_lab/widgets/card_widget.dart';
+import 'package:dummy_flutter_ui/monstar_lab/widgets/notification_widget.dart';
 import 'package:dummy_flutter_ui/navigation/bottom_navigation_bar/bottom_navigation_bar2.dart';
 import 'package:dummy_flutter_ui/navigation/bottom_navigation_bar/models/menu.dart';
 import 'package:flutter/material.dart';
@@ -159,8 +160,12 @@ class _HomeScreenDrawer2State extends State<HomeScreenDrawer2>
       ),
       body: Stack(
         children: [
-          Container(
-            child: _widgetHomeScreen(),
+          Padding(
+            padding:
+                const EdgeInsets.only(top: 5, left: 10, right: 10, bottom: 10),
+            child: Container(
+              child: _widgetHomeScreen(),
+            ),
           ),
           Positioned(
             top: 0,
@@ -269,26 +274,17 @@ class _HomeScreenDrawer2State extends State<HomeScreenDrawer2>
   }
 
   Widget _widgetHomeScreen() {
-    return CustomScrollView(
-      slivers: [
-        SliverToBoxAdapter(
-          child: CardWidget(),
-
-          // SizedBox(
-          //   height: MediaQuery.of(context).size.height,
-          //   width: MediaQuery.of(context).size.width,
-          //   child: Image.asset("assets/background/bgapp.jpg"),
-          // ),
-          // Positioned(
-          //   top: 20,
-          //   left: 20,
-          //   right: 20,
-          //   child: Padding(
-          //     padding: const EdgeInsets.all(20),
-          //     child: CardWidget(),
-          //   ),
-          // ),
-        )
+    return ListView(
+      children: const [
+        Padding(
+            padding: EdgeInsets.only(left: 10, right: 10),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                CardWidget(),
+                BellWidget(),
+              ],
+            )),
       ],
     );
   }

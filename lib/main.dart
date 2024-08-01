@@ -10,6 +10,7 @@ import 'package:dummy_flutter_ui/navigation/tab_bar2/home_page.dart';
 import 'package:dummy_flutter_ui/persistence/hive/models/todo_item_model.dart';
 import 'package:dummy_flutter_ui/persistence/shared_preferences/sp_home_screen.dart';
 import 'package:dummy_flutter_ui/persistence/sqlite/sqlite_home_creen.dart';
+import 'package:dummy_flutter_ui/persistence/sqlite2/sqlite_screen.dart';
 import 'package:dummy_flutter_ui/scrolling_widgets/customscrollview/custom_scroll_view.dart';
 import 'package:dummy_flutter_ui/scrolling_widgets/customscrollview/custom_scroll_view2.dart';
 import 'package:dummy_flutter_ui/scrolling_widgets/customscrollview/custom_scroll_view3.dart';
@@ -63,7 +64,8 @@ class MyApp extends StatelessWidget {
       // home: const CustomScrollViewScreen(),
       // home: const CustomScrollPageThree(),
       // home: const SqliteHomeScreen(),
-      home: const SplashScreen(),
+      // home: const SplashScreen(),
+      home: SQLScreen(),
       // home: const SharedPrefrenceScreen(),
     );
   }

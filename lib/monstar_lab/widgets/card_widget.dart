@@ -5,49 +5,14 @@ class CardWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      elevation: 8,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(15),
-      ),
+    return SizedBox(
+      width: (MediaQuery.of(context).size.width / 3) * 2,
+      height: (MediaQuery.of(context).size.width / 3),
       child: Container(
-        width: double.infinity,
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            ClipRRect(
-              borderRadius: BorderRadius.vertical(top: Radius.circular(15)),
-              child: Image.asset(
-                "images/avatar.png",
-                height: 150,
-                width: double.infinity,
-                fit: BoxFit.cover,
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(16),
-              child: Column(
-                children: [
-                  Text("Tieu de"),
-                  const SizedBox(
-                    height: 8,
-                  ),
-                  Text("Nothing gggg"),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  Row(
-                    children: [
-                      TextButton(
-                        onPressed: () {},
-                        child: Text("Xem them"),
-                      ),
-                    ],
-                  )
-                ],
-              ),
-            )
-          ],
+        width: (MediaQuery.of(context).size.width / 2) - 20,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
+          color: Colors.green,
         ),
       ),
     );

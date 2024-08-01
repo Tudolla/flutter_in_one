@@ -19,7 +19,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   _navigationToHomeScreen() async {
-    await Future.delayed(const Duration(seconds: 4));
+    await Future.delayed(const Duration(seconds: 6));
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(builder: (context) => const HomeScreenDrawer2()),
@@ -34,7 +34,7 @@ class _SplashScreenState extends State<SplashScreen> {
         child: Stack(
           children: [
             Padding(
-              padding: const EdgeInsets.only(top: 20, right: 15, left: 15),
+              padding: const EdgeInsets.only(top: 40, right: 15, left: 15),
               child: Column(
                 children: [
                   Row(
@@ -47,8 +47,8 @@ class _SplashScreenState extends State<SplashScreen> {
                       ),
                       Center(
                         child: SizedBox(
-                            height: MediaQuery.of(context).size.width / 7,
-                            width: MediaQuery.of(context).size.width / 7,
+                            height: MediaQuery.of(context).size.width / 8,
+                            width: MediaQuery.of(context).size.width / 8,
                             child:
                                 LottieBuilder.asset("assets/animation.json")),
                       ),
