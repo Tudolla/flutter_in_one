@@ -7,6 +7,7 @@ import 'package:dummy_flutter_ui/navigation/drawer/main_screen.dart';
 import 'package:dummy_flutter_ui/navigation/drawer2/home_screen.dart';
 import 'package:dummy_flutter_ui/navigation/tab_bar/tab_bar_screen.dart';
 import 'package:dummy_flutter_ui/navigation/tab_bar2/home_page.dart';
+import 'package:dummy_flutter_ui/pagination/pages/pagination_home.dart';
 import 'package:dummy_flutter_ui/persistence/hive/models/todo_item_model.dart';
 import 'package:dummy_flutter_ui/persistence/shared_preferences/sp_home_screen.dart';
 import 'package:dummy_flutter_ui/persistence/sqlite/sqlite_home_creen.dart';
@@ -65,7 +66,8 @@ class MyApp extends StatelessWidget {
       // home: const CustomScrollPageThree(),
       // home: const SqliteHomeScreen(),
       // home: const SplashScreen(),
-      home: SQLScreen(),
+      // home: SQLScreen(),
+      home: const PaginationScreen(),
       // home: const SharedPrefrenceScreen(),
     );
   }
