@@ -43,11 +43,11 @@ app.*.map.json
 /android/app/release
 
 
-/lib/networking/
-/lib/persistence/
-/lib/scrolling_widgets/
-/lib/animations/
-/lib/common_widgets/
-/lib/gestures/
-/lib/navigation/
+# /lib/networking/
+# /lib/persistence/
+# /lib/scrolling_widgets/
+# /lib/animations/
+# /lib/common_widgets/
+# /lib/gestures/
+# /lib/navigation/
 

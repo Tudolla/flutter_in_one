@@ -1,5 +1,5 @@
-import 'package:dummy_flutter_ui/monstar_lab/screen/home_screen.dart';
-import 'package:dummy_flutter_ui/navigation/drawer2/home_screen.dart';
+import 'package:dummy/monstar_lab/screen/home_screen.dart';
+
 import 'package:flutter/material.dart';
 
 class DrawerScreen extends StatefulWidget {

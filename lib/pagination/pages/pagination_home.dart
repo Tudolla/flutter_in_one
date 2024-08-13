@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:dummy_flutter_ui/pagination/model/product.dart';
+import 'package:dummy/pagination/model/product.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
@@ -85,16 +85,21 @@ class _PaginationScreenState extends State<PaginationScreen> {
       setState(() {
         isLoading = true;
       });
+      // explain this api url:
+      // baseURL : https://dummyjson.com/products
+      // limit   : get only 15 item in the first time
+      // skip    : this is main in pagination - skip 15 item before, and continute get more 15 item
+      // in the next
+      // select : get only title, price, thumbnail
       final response = await dio.get(
           "https://dummyjson.com/products?limit=15&skip=${products.length}&select=title,price,thumbnail");
-      final List data = response.data['products'];
+      final List<dynamic> data = response.data['products'];
 
       final List<Product> newProducts =
           data.map((e) => Product.fromJson(e)).toList();
 
       setState(() {
         totalProduct = response.data['total'];
-
         products.addAll(newProducts);
         isLoading = false;
       });

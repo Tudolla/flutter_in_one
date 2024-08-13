@@ -1,6 +1,5 @@
-import 'package:dummy_flutter_ui/monstar_lab/screens/drawer_screen.dart';
-import 'package:dummy_flutter_ui/monstar_lab/screens/home_page.dart';
-
+import 'package:dummy/monstar_lab/screens/drawer_screen.dart';
+import 'package:dummy/monstar_lab/screens/home_page.dart';
 import 'package:flutter/material.dart';
 
 class MainScreen extends StatelessWidget {

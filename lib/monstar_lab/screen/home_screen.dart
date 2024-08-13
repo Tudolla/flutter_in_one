@@ -1,10 +1,10 @@
-import 'package:dummy_flutter_ui/monstar_lab/screen/drawer.dart';
-import 'package:dummy_flutter_ui/monstar_lab/widgets/card_widget.dart';
-import 'package:dummy_flutter_ui/monstar_lab/widgets/notification_widget.dart';
-import 'package:dummy_flutter_ui/navigation/bottom_navigation_bar/bottom_navigation_bar2.dart';
-import 'package:dummy_flutter_ui/navigation/bottom_navigation_bar/models/menu.dart';
+import 'package:dummy/monstar_lab/screen/drawer.dart';
+import 'package:dummy/monstar_lab/widgets/card_widget.dart';
+import 'package:dummy/monstar_lab/widgets/notification_widget.dart';
+import 'package:dummy/navigation/bottom_navigation_bar/bottom_navigation_bar2.dart';
+import 'package:dummy/navigation/bottom_navigation_bar/models/menu.dart';
+
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
 import 'package:rive/rive.dart';
 
 class HomeScreenDrawer2 extends StatefulWidget {
@@ -143,11 +143,14 @@ class _HomeScreenDrawer2State extends State<HomeScreenDrawer2>
                         onInit: (artboard) {
                           StateMachineController? controller =
                               StateMachineController.fromArtboard(
-                                  artboard, riveIcon.stateMachineName);
+                            artboard,
+                            riveIcon.stateMachineName,
+                          );
                           artboard.addController(controller!);
                           controllers.add(controller);
                           riveIconInputs.add(
-                              controller.findInput<bool>('active') as SMIBool);
+                            controller.findInput<bool>('active') as SMIBool,
+                          );
                         },
                       ),
                     ),
@@ -205,8 +208,8 @@ class _HomeScreenDrawer2State extends State<HomeScreenDrawer2>
                       children: [
                         CircleAvatar(
                           child: ClipRRect(
-                            child: Image.asset("images/avatar.png"),
-                          ),
+                              // child: Image.asset("images/avatar.png"),
+                              ),
                         ),
                         const SizedBox(
                           height: 10,
@@ -247,20 +250,22 @@ class _HomeScreenDrawer2State extends State<HomeScreenDrawer2>
                           height: 10,
                         ),
                         ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                                backgroundColor: Colors.green[50],
-                                elevation: 1,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(10),
-                                )),
-                            onPressed: () {},
-                            child: const Text(
-                              "Sign in",
-                              style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ))
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.green[50],
+                            elevation: 1,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                          ),
+                          onPressed: () {},
+                          child: const Text(
+                            "Sign in",
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
                       ],
                     ),
                   ),
@@ -277,14 +282,15 @@ class _HomeScreenDrawer2State extends State<HomeScreenDrawer2>
     return ListView(
       children: const [
         Padding(
-            padding: EdgeInsets.only(left: 10, right: 10),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                CardWidget(),
-                BellWidget(),
-              ],
-            )),
+          padding: EdgeInsets.only(left: 10, right: 10),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              CardWidget(),
+              BellWidget(),
+            ],
+          ),
+        ),
       ],
     );
   }
